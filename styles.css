@@ -8,6 +8,7 @@
   --text-dim: #9aa8c2;
   --accent: #4fd1c5;
   --accent-2: #6b8afd;
+  --nav-bg: rgba(10, 15, 30, 0.75);
   --max: 1100px;
   --radius: 14px;
 }
@@ -21,6 +22,7 @@
   --text-dim: #566178;
   --accent: #0d9488;
   --accent-2: #3358e0;
+  --nav-bg: rgba(255, 255, 255, 0.75);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -61,7 +63,7 @@ img { max-width: 100%; display: block; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(10, 15, 30, 0.75);
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
