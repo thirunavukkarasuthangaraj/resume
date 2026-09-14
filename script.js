@@ -1,12 +1,10 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
 const themeToggle = document.getElementById("themeToggle");
-const themeIcon = themeToggle.querySelector(".theme-icon");
 const root = document.documentElement;
 
 function applyTheme(theme) {
   root.setAttribute("data-theme", theme);
-  themeIcon.textContent = theme === "light" ? "☀️" : "🌙";
 }
 
 const savedTheme = localStorage.getItem("theme");
