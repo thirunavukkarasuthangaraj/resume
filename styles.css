@@ -495,15 +495,47 @@ img { max-width: 100%; display: block; }
   border-color: var(--accent);
   background: var(--card-hover);
 }
+.project-head {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 .project-card h3 {
   font-size: 1.02rem;
   font-weight: 600;
   color: var(--text);
 }
+.project-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+}
 .project-card p {
   color: var(--text-dim);
   font-size: 0.88rem;
+}
+.project-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
   flex: 1;
+}
+.project-points li {
+  color: var(--text-dim);
+  font-size: 0.86rem;
+  padding-left: 15px;
+  position: relative;
+}
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 .project-card .tags span {
   font-size: 0.74rem;
