@@ -543,6 +543,24 @@ img { max-width: 100%; display: block; }
   background: var(--bg-alt);
 }
 
+.project-link,
+.project-link-row {
+  display: inline-flex;
+}
+.project-link-row {
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.project-link {
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.project-link:hover { color: var(--accent-strong); }
+.project-link .icon { width: 13px; height: 13px; }
+
 /* ---- Education ---- */
 .edu-lang-grid {
   display: grid;
