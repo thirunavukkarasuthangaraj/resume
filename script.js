@@ -31,3 +31,30 @@ navLinks.querySelectorAll("a").forEach((link) => {
     navToggle.setAttribute("aria-expanded", "false");
   });
 });
+
+const projectsToggle = document.getElementById("projectsToggle");
+const projectsGrid = document.getElementById("projectsGrid");
+
+if (projectsToggle && projectsGrid) {
+  projectsToggle.addEventListener("click", () => {
+    const isOpen = projectsGrid.classList.contains("open");
+    const label = projectsToggle.querySelector(".toggle-label");
+    if (isOpen) {
+      projectsGrid.style.maxHeight = "0px";
+      projectsGrid.classList.remove("open");
+      projectsToggle.setAttribute("aria-expanded", "false");
+      label.textContent = "Show Projects";
+    } else {
+      projectsGrid.classList.add("open");
+      projectsGrid.style.maxHeight = projectsGrid.scrollHeight + "px";
+      projectsToggle.setAttribute("aria-expanded", "true");
+      label.textContent = "Hide Projects";
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (projectsGrid.classList.contains("open")) {
+      projectsGrid.style.maxHeight = projectsGrid.scrollHeight + "px";
+    }
+  });
+}
