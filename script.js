@@ -32,29 +32,29 @@ navLinks.querySelectorAll("a").forEach((link) => {
   });
 });
 
-const projectsToggle = document.getElementById("projectsToggle");
-const projectsGrid = document.getElementById("projectsGrid");
+const freelanceToggle = document.getElementById("freelanceToggle");
+const freelanceGrid = document.getElementById("freelanceGrid");
 
-if (projectsToggle && projectsGrid) {
-  projectsToggle.addEventListener("click", () => {
-    const isOpen = projectsGrid.classList.contains("open");
-    const label = projectsToggle.querySelector(".toggle-label");
+if (freelanceToggle && freelanceGrid) {
+  freelanceToggle.addEventListener("click", () => {
+    const isOpen = freelanceGrid.classList.contains("open");
+    const label = freelanceToggle.querySelector(".toggle-label");
     if (isOpen) {
-      projectsGrid.style.maxHeight = "0px";
-      projectsGrid.classList.remove("open");
-      projectsToggle.setAttribute("aria-expanded", "false");
+      freelanceGrid.style.maxHeight = "0px";
+      freelanceGrid.classList.remove("open");
+      freelanceToggle.setAttribute("aria-expanded", "false");
       label.textContent = "Show Projects";
     } else {
-      projectsGrid.classList.add("open");
-      projectsGrid.style.maxHeight = projectsGrid.scrollHeight + "px";
-      projectsToggle.setAttribute("aria-expanded", "true");
+      freelanceGrid.classList.add("open");
+      freelanceGrid.style.maxHeight = freelanceGrid.scrollHeight + "px";
+      freelanceToggle.setAttribute("aria-expanded", "true");
       label.textContent = "Hide Projects";
     }
   });
 
   window.addEventListener("resize", () => {
-    if (projectsGrid.classList.contains("open")) {
-      projectsGrid.style.maxHeight = projectsGrid.scrollHeight + "px";
+    if (freelanceGrid.classList.contains("open")) {
+      freelanceGrid.style.maxHeight = freelanceGrid.scrollHeight + "px";
     }
   });
 }
